@@ -1,1 +1,7 @@
 node_modules/
+/.env
+/.idea/.gitignore
+/.idea/jsLibraryMappings.xml
+/tests/main.js
+/.idea/misc.xml
+/.idea/modules.xml
