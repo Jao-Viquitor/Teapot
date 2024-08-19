@@ -14,15 +14,15 @@ export const UserProfile = () => {
     }
 
     return (
-        <div>
+        <section>
             {user ? (
-                <div>
+                <div className="row">
                     <h2>Olá, {user.profile.name}</h2>
                     <button onClick={() => Meteor.logout()}>Logout</button>
                 </div>
             ) : (
                 <p>Você não está logado</p>
             )}
-        </div>
+        </section>
     );
 };
