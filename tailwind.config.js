@@ -1,4 +1,5 @@
 module.exports = {
+  darkMode: 'class',
   content: [
     './client/**/*.html',
     './client/**/*.js',
@@ -12,15 +13,11 @@ module.exports = {
     extend: {
       colors: {
         dark: {
-          title: '#f2f8fd',
-          paragraph: '#cbd5e1',
-          bgFirst: '#112A46',
-          bgSec: '#1c3b57',
-          textPrimary: '#e2e8f0',
-          textSecondary: '#94a3b8',
+          textPrimary: '#f2f8fd',
+          textSecondary: '#cbd5e1',
           textAccent: '#38bdf8',
-          bgPrimary: '#0f172a',
-          bgSecondary: '#1e293b',
+          bgPrimary: '#112A46',
+          bgSecondary: '#1c3b57',
           bgAccent: '#334155',
           borderPrimary: '#64748b',
           borderSecondary: '#475569',
@@ -39,15 +36,11 @@ module.exports = {
           shadowSecondary: 'rgba(0, 0, 0, 0.5)',
         },
         light: {
-          title: '#1f2937',
-          paragraph: '#4b5563',
-          bgFirst: '#f9fafb',
-          bgSec: '#e5e7eb',
-          textPrimary: '#111827',
-          textSecondary: '#6b7280',
+          textPrimary: '#1f2937',
+          textSecondary: '#4b5563',
           textAccent: '#2563eb',
-          bgPrimary: '#ffffff',
-          bgSecondary: '#f3f4f6',
+          bgPrimary: '#f9fafb',
+          bgSecondary: '#e5e7eb',
           bgAccent: '#e0e7ff',
           borderPrimary: '#d1d5db',
           borderSecondary: '#e5e7eb',
@@ -66,6 +59,11 @@ module.exports = {
           shadowSecondary: 'rgba(0, 0, 0, 0.05)',
         }
       }
+    },
+    variants: {
+      extend: {
+        backgroundColor: ['dark'],
+      },
     },
   },
   plugins: [

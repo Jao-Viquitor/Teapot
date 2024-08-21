@@ -1,3 +1,59 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    :root {
+        --shadow-primary: rgba(0, 0, 0, 0.1);
+        --shadow-secondary: rgba(0, 0, 0, 0.5);
+    }
+
+    .dark {
+        --shadow-primary: rgba(0, 0, 0, 0.75);
+        --shadow-secondary: rgba(0, 0, 0, 0.25);
+    }
+}
+@layer components {
+    .bg-primary {
+        @apply bg-light-bgPrimary min-h-screen flex items-center justify-center;
+        box-shadow: 0 10px 15px -3px var(--shadow-primary), 0 4px 6px -2px var(--shadow-secondary);
+    }
+
+    .dark .bg-primary {
+        @apply bg-dark-bgPrimary;
+    }
+
+    .bg-secondary {
+        @apply bg-light-bgSecondary py-12 rounded-lg w-full max-w-sm gap-4;
+        box-shadow: 0 10px 15px -3px var(--shadow-primary), 0 4px 6px -2px var(--shadow-secondary);
+    }
+
+    .dark .bg-secondary {
+        @apply bg-dark-bgSecondary;
+    }
+
+    .text-title {
+        @apply text-light-textPrimary text-5xl pb-2 text-center;
+    }
+
+    .dark .text-title {
+        @apply text-dark-textPrimary;
+    }
+
+    .text-paragraph {
+        @apply text-light-textSecondary text-center;
+    }
+
+    .dark .text-paragraph {
+        @apply text-dark-textSecondary;
+    }
+
+    .btn-social {
+        @apply text-white shadow-xl bg-light-buttonPrimary hover:bg-light-buttonHover focus:ring-4 focus:outline-none focus:ring-light-buttonPrimary/75 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center me-2 mb-2;
+    }
+
+    .dark .btn-social {
+        @apply text-white bg-dark-buttonPrimary hover:bg-dark-buttonHover focus:ring-dark-buttonPrimary/75;
+    }
+}
+
