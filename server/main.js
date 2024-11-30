@@ -7,7 +7,6 @@ import dotenv from 'dotenv';
 Meteor.startup(() => {
 
     dotenv.config();
-
     ServiceConfiguration.configurations.upsert(
         { service: 'google' },
         {
@@ -21,14 +20,6 @@ Meteor.startup(() => {
     Transactions.allow({
         insert: () => true,
     });
-});
-
-Meteor.publish('transactions', function () {
-    if (!this.userId) {
-        return this.ready();
-    }
-
-    return Transactions.find({ userId: this.userId });
 });
 
 Accounts.onCreateUser((options, user) => {
